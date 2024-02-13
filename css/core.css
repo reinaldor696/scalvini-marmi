@@ -1,0 +1,174 @@
+/* ################################## */
+            /*Imports*/
+/* ################################## */
+@import url(responsive.css);
+/* ################################## */
+            /*Imports*/
+/* ################################## */
+
+/* ################################## */
+            /*Fonts*/
+/* ################################## */
+@import url(fonts/);
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+/* ################################## */
+            /*Fonts*/
+/* ################################## */
+
+/* ################################## */
+            /*Plugins*/
+/* ################################## */
+/* Banner cookies */
+@import url(plugins/cookies.css);
+/* ################################## */
+            /*Plugins*/
+/* ################################## */
+
+/* Default */
+*,*::after,*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+ul {
+  list-style: none !important;
+}
+/* Default */
+
+/* SELECTION para ACTIVAR DEBES DESCOMENTAR */
+::selection {
+  display: none;
+}
+/* SELECTION */
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+  display: none;
+}
+/* SCROLLBAR */
+
+/* HTML */
+html {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+/* HTML */
+
+/* Body */
+body {
+  background-color: #000;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Cursor */
+
+/* Cursor End*/
+
+/* Pre Loader */
+
+/* Pre Loader End */
+
+/* Header */
+
+/* Header End*/
+
+/* Content Container1 */
+.content-container1 {
+  width: 100%;
+  height: auto;
+}
+
+/* Content Container1 End */
+
+/* Content Container2 */
+.content-container2 {
+  width: 100%;
+  height: auto;
+}
+/* Content Container2 End */
+
+/* Content Container */
+.content-container3 {
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+}
+/* Content Container3 End */
+
+/* Content Container4 */
+.content-container4 {
+  width: 100%;
+  height: auto;
+  background-color: black;
+}
+/* Content Container4 End */
+
+/* Footer */
+.footer-container {
+  width: 100%;
+  height: auto;
+}
+
+/* Footer End */
+
+/* Body */
+
+/* Fixed's */
+  /* Top */
+  .fixed-top {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+  }
+  /* Top */
+  /* Top right */
+  .fixed-top-right {
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 10;
+  }
+  /* Top right */
+  /* Top left */
+  .fixed-top-left {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
+  /* Top left */
+
+  /* Bottom */
+  .fixed-bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+  }
+  /* Bottom */
+  /* Bottom right */
+  .fixed-bottom-right {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 10;
+  }
+  /* Bottom right */
+  /* Bottom left */
+  .fixed-bottom-left {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+  }
+  /* Bottom left */
+/* Fixed's */

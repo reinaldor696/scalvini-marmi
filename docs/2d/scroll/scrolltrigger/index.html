@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en" >
+   <head>
+      <meta charset="UTF-8">
+      <title>ScrollTrigger</title>
+      <link rel="stylesheet" href="../../single-style.css">
+   </head>
+   <body>
+      <div class="navleft">
+         <a href="../../2d.html" class="blog-menu">
+            Dashboard
+            <svg fill="none" stroke="currentColor" stroke-width=".7" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up-right" viewBox="0 0 24 24">
+               <path d="M7 17L17 7M7 7h10v10" />
+            </svg>
+         </a>
+         <a href="../../2d.html#tab-es6" class="blog-menu">Scroll</a>
+         <a href="../../2d.html#tab-flexbox" class="blog-menu">SVG</a>
+         <a href="../../2d.html#tab-react" class="blog-menu">UI</a>
+         <a href="../../2d.html#tab-angular" class="blog-menu">TEXT</a>
+         <a href="https://gsap.com/docs/v3/Eases" target="_blank" class="blog-menu">
+            EASE
+            <svg fill="none" stroke="currentColor" stroke-width=".7" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-up-right" viewBox="0 0 24 24">
+               <path d="M7 17L17 7M7 7h10v10" />
+            </svg>
+         </a>
+         <a href="../../optimization/index.html" class="blog-menu">OPTIMIZATION</a>
+         <a href="#" class="blog-menu mention">Basedev</a>
+         <a href="#" class="blog-menu subscribe">version 0.1</a>
+      </div>
+
+      <div id="smooth-wrapper">
+         <div id="smooth-content">
+            <div class="blog-header" id="section1">
+               <div class="blog-article header-article">
+                  <div class="blog-big__title">ScrollSmoother</div>
+                  <p style="text-align: center;">Para comenzar agregar el efecto ScrollSmoother, agrega el còdigo de abajo a tu còdigo </p>
+                  <p style="text-align: center;">To start adding the ScrollSmoother effect, add the code below to your code </p>
+               </div>
+               <div class="blog-article">
+                  <div class="tab">
+                     <input type="checkbox" name="accordion-1" id="cb1">
+                     <label for="cb1" class="tab__label">Quick start</label>
+                     <div class="tab__content">
+                        <div class="theme-code-block">
+                           <div class="codeBlockContent_biex">
+                              <pre tabindex="0" class="prism-code language-js codeBlock_bY9V thin-scrollbar">
+                                 <code class="codeBlockLines_node_modules-@docusaurus-theme-classic-lib-theme-CodeBlock-Content-styles-module"><span class="token-line" style="color: rgb(191, 199, 213);"><span class="token tag punctuation" style="color: rgb(199, 146, 234);">&lt;</span><span class="token tag" style="color: rgb(255, 85, 114);">div</span><span class="token tag" style="color: rgb(255, 85, 114);"> </span><span class="token tag attr-name" style="color: rgb(255, 203, 107);">id</span><span class="token tag attr-value punctuation attr-equals" style="color: rgb(199, 146, 234);">=</span><span class="token tag attr-value punctuation" style="color: rgb(199, 146, 234);">"</span><span class="token tag attr-value" style="color: rgb(255, 85, 114);">smooth-wrapper</span><span class="token tag attr-value punctuation" style="color: rgb(199, 146, 234);">"</span><span class="token tag punctuation" style="color: rgb(199, 146, 234);">&gt;</span><span class="token plain"></span><br></span><span class="token-line" style="color: rgb(191, 199, 213);"><span class="token plain">  </span><span class="token tag punctuation" style="color: rgb(199, 146, 234);">&lt;</span><span class="token tag" style="color: rgb(255, 85, 114);">div</span><span class="token tag" style="color: rgb(255, 85, 114);"> </span><span class="token tag attr-name" style="color: rgb(255, 203, 107);">id</span><span class="token tag attr-value punctuation attr-equals" style="color: rgb(199, 146, 234);">=</span><span class="token tag attr-value punctuation" style="color: rgb(199, 146, 234);">"</span><span class="token tag attr-value" style="color: rgb(255, 85, 114);">smooth-content</span><span class="token tag attr-value punctuation" style="color: rgb(199, 146, 234);">"</span><span class="token tag punctuation" style="color: rgb(199, 146, 234);">&gt;</span><span class="token plain"></span><br></span><span class="token-line" style="color: rgb(191, 199, 213);"><span class="token plain">    </span><span class="token comment" style="color: rgb(156, 156, 156); font-style: italic;">&lt;!--- ALL YOUR CONTENT HERE ---&gt;</span><span class="token plain"></span><br></span><span class="token-line" style="color: rgb(191, 199, 213);"><span class="token plain">  </span><span class="token tag punctuation" style="color: rgb(199, 146, 234);">&lt;/</span><span class="token tag" style="color: rgb(255, 85, 114);">div</span><span class="token tag punctuation" style="color: rgb(199, 146, 234);">&gt;</span><span class="token plain"></span><br></span><span class="token-line" style="color: rgb(191, 199, 213);"><span class="token plain"></span><span class="token tag punctuation" style="color: rgb(199, 146, 234);">&lt;/</span><span class="token tag" style="color: rgb(255, 85, 114);">div</span><span class="token tag punctuation" style="color: rgb(199, 146, 234);">&gt;</span><span class="token plain"></span><br></span><span class="token-line" style="color: rgb(191, 199, 213);"><span class="token plain"></span><span class="token comment" style="color: rgb(156, 156, 156); font-style: italic;">&lt;!-- position: fixed elements can go outside --&gt;</span><br></span></code>
+                              </pre>
+                              <div class="buttonGroup__atx">
+                                 <button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn">
+                                    <span class="copyButtonIcons_eSgA" aria-hidden="true">
+                                       <svg viewBox="0 0 24 24" class="copyButtonIcon_y97N">
+                                          <path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path>
+                                       </svg>
+                                       <svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS">
+                                          <path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path>
+                                       </svg>
+                                    </span>
+                                 </button>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="blog-header" id="section2">
+               <div class="blog-article header-article">
+                  <div class="blog-big__title">Speed</div>
+                  <p style="text-align: center;">Agregar funciones a tu còdigo</p>
+                  <p style="text-align: center;">Adding functions to your code</p>
+               </div>
+               <div class="blog-article-p">
+                  <h1>Speed (parallax)</h1>
+                  <p>When you set effects: true, ScrollSmoother finds all elements that have a data-speed attribute and applies a parallax effect accordingly so that they move at the designated speed. For example:</p>
+                  <div class="theme-code-block">
+                     <div class="codeBlockContent_biex">
+                        <pre tabindex="0" class="prism-code language-js codeBlock_bY9V thin-scrollbar">
+                           <code class="codeBlockLines_e6Vv"><span class="token-line" style="color: rgb(191, 199, 213);"><span class="token tag punctuation" style="color: rgb(199, 146, 234);">&lt;</span><span class="token tag" style="color: rgb(255, 85, 114);">div</span><span class="token tag" style="color: rgb(255, 85, 114);"> </span><span class="token tag attr-name" style="color: rgb(255, 203, 107);">data-speed</span><span class="token tag attr-value punctuation attr-equals" style="color: rgb(199, 146, 234);">=</span><span class="token tag attr-value punctuation" style="color: rgb(199, 146, 234);">"</span><span class="token tag attr-value" style="color: rgb(255, 85, 114);">0.5</span><span class="token tag attr-value punctuation" style="color: rgb(199, 146, 234);">"</span><span class="token tag punctuation" style="color: rgb(199, 146, 234);">&gt;</span><span class="token tag punctuation" style="color: rgb(199, 146, 234);">&lt;/</span><span class="token tag" style="color: rgb(255, 85, 114);">div</span><span class="token tag punctuation" style="color: rgb(199, 146, 234);">&gt;</span><span class="token plain"></span><br></span><span class="token-line" style="color: rgb(191, 199, 213);"><span class="token plain"></span><span class="token comment" style="color: rgb(156, 156, 156); font-style: italic;">&lt;!-- half-speed of scroll --&gt;</span><span class="token plain"></span><br></span><span class="token-line" style="color: rgb(191, 199, 213);"><span class="token plain"></span><span class="token tag punctuation" style="color: rgb(199, 146, 234);">&lt;</span><span class="token tag" style="color: rgb(255, 85, 114);">div</span><span class="token tag" style="color: rgb(255, 85, 114);"> </span><span class="token tag attr-name" style="color: rgb(255, 203, 107);">data-speed</span><span class="token tag attr-value punctuation attr-equals" style="color: rgb(199, 146, 234);">=</span><span class="token tag attr-value punctuation" style="color: rgb(199, 146, 234);">"</span><span class="token tag attr-value" style="color: rgb(255, 85, 114);">2</span><span class="token tag attr-value punctuation" style="color: rgb(199, 146, 234);">"</span><span class="token tag punctuation" style="color: rgb(199, 146, 234);">&gt;</span><span class="token tag punctuation" style="color: rgb(199, 146, 234);">&lt;/</span><span class="token tag" style="color: rgb(255, 85, 114);">div</span><span class="token tag punctuation" style="color: rgb(199, 146, 234);">&gt;</span><span class="token plain"></span><br></span><span class="token-line" style="color: rgb(191, 199, 213);"><span class="token plain"></span><span class="token comment" style="color: rgb(156, 156, 156); font-style: italic;">&lt;!-- double-speed of scroll --&gt;</span><span class="token plain"></span><br></span><span class="token-line" style="color: rgb(191, 199, 213);"><span class="token plain"></span><span class="token tag punctuation" style="color: rgb(199, 146, 234);">&lt;</span><span class="token tag" style="color: rgb(255, 85, 114);">div</span><span class="token tag" style="color: rgb(255, 85, 114);"> </span><span class="token tag attr-name" style="color: rgb(255, 203, 107);">data-speed</span><span class="token tag attr-value punctuation attr-equals" style="color: rgb(199, 146, 234);">=</span><span class="token tag attr-value punctuation" style="color: rgb(199, 146, 234);">"</span><span class="token tag attr-value" style="color: rgb(255, 85, 114);">1</span><span class="token tag attr-value punctuation" style="color: rgb(199, 146, 234);">"</span><span class="token tag punctuation" style="color: rgb(199, 146, 234);">&gt;</span><span class="token tag punctuation" style="color: rgb(199, 146, 234);">&lt;/</span><span class="token tag" style="color: rgb(255, 85, 114);">div</span><span class="token tag punctuation" style="color: rgb(199, 146, 234);">&gt;</span><span class="token plain"></span><br></span><span class="token-line" style="color: rgb(191, 199, 213);"><span class="token plain"></span><span class="token comment" style="color: rgb(156, 156, 156); font-style: italic;">&lt;!-- normal speed of scroll --&gt;</span><span class="token plain"></span><br></span><span class="token-line" style="color: rgb(191, 199, 213);"><span class="token plain"></span><span class="token tag punctuation" style="color: rgb(199, 146, 234);">&lt;</span><span class="token tag" style="color: rgb(255, 85, 114);">div</span><span class="token tag" style="color: rgb(255, 85, 114);"> </span><span class="token tag attr-name" style="color: rgb(255, 203, 107);">data-speed</span><span class="token tag attr-value punctuation attr-equals" style="color: rgb(199, 146, 234);">=</span><span class="token tag attr-value punctuation" style="color: rgb(199, 146, 234);">"</span><span class="token tag attr-value" style="color: rgb(255, 85, 114);">auto</span><span class="token tag attr-value punctuation" style="color: rgb(199, 146, 234);">"</span><span class="token tag punctuation" style="color: rgb(199, 146, 234);">&gt;</span><span class="token tag punctuation" style="color: rgb(199, 146, 234);">&lt;/</span><span class="token tag" style="color: rgb(255, 85, 114);">div</span><span class="token tag punctuation" style="color: rgb(199, 146, 234);">&gt;</span><span class="token plain"></span><br></span><span class="token-line" style="color: rgb(191, 199, 213);"><span class="token plain"></span><span class="token comment" style="color: rgb(156, 156, 156); font-style: italic;">&lt;!-- auto-calculated based on how far it can move inside its container --&gt;</span><br></span></code>
+                        </pre>
+                        <div class="buttonGroup__atx">
+                           <button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn">
+                              <span class="copyButtonIcons_eSgA" aria-hidden="true">
+                                 <svg viewBox="0 0 24 24" class="copyButtonIcon_y97N">
+                                    <path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path>
+                                 </svg>
+                                 <svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS">
+                                    <path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path>
+                                 </svg>
+                              </span>
+                           </button>
+                        </div>
+                     </div>
+                  </div>
+                  <h1>"auto" speed</h1>
+                  <p>When you set the speed to "auto", it will calculate how far it can move inside its parent container in the direction of the largest gap (up or down). So it's perfect for parallax effects - just make the child larger than its parent, align it where you want it (typically its top edge at the top of the container, or the bottom edge at the bottom of the container) and let ScrollSmoother do its magic. Obviously set overflow: hidden on the parent so it clips the child.</p>
+                  <h1>clamp() speed effects</h1>
+                  <p>Have you ever had an element that you natively placed toward the very top of your page but when you apply a data-speed, it starts out shifted from its native position? That's because by default, speed effects cause elements to reach their "native" position when centered vertically in the viewport, so they'll likely start out offset. Starting in version 3.12, you can wrap your speed value in "clamp()" to make them start out in their native position if they're "above the fold" (inside the viewport when scrolled to the very top). Under the hood, data-speed effects are driven by ScrollTrigger instances, so this a way to employ ScrollTrigger's clamp() feature that prevents the start/end values from "leaking" outside the page bounds (never less than 0 and never more than the maximum scroll position). For example:</p>
+                  <div class="theme-code-block">
+                     <div class="codeBlockContent_biex">
+                        <pre tabindex="0" class="prism-code language-js codeBlock_bY9V thin-scrollbar">
+                           <code class="codeBlockLines_e6Vv"><span class="token-line" style="color: rgb(191, 199, 213);"><span class="token tag punctuation" style="color: rgb(199, 146, 234);">&lt;</span><span class="token tag" style="color: rgb(255, 85, 114);">div</span><span class="token tag" style="color: rgb(255, 85, 114);"> </span><span class="token tag attr-name" style="color: rgb(255, 203, 107);">data-speed</span><span class="token tag attr-value punctuation attr-equals" style="color: rgb(199, 146, 234);">=</span><span class="token tag attr-value punctuation" style="color: rgb(199, 146, 234);">"</span><span class="token tag attr-value" style="color: rgb(255, 85, 114);">clamp(0.5)</span><span class="token tag attr-value punctuation" style="color: rgb(199, 146, 234);">"</span><span class="token tag punctuation" style="color: rgb(199, 146, 234);">&gt;</span><span class="token tag punctuation" style="color: rgb(199, 146, 234);">&lt;/</span><span class="token tag" style="color: rgb(255, 85, 114);">div</span><span class="token tag punctuation" style="color: rgb(199, 146, 234);">&gt;</span><span class="token plain"></span><br></span><span class="token-line" style="color: rgb(191, 199, 213);"><span class="token plain"></span><span class="token comment" style="color: rgb(156, 156, 156); font-style: italic;">&lt;!-- clamped half-speed --&gt;</span><br></span></code>
+                        </pre>
+                        <div class="buttonGroup__atx">
+                           <button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn">
+                              <span class="copyButtonIcons_eSgA" aria-hidden="true">
+                                 <svg viewBox="0 0 24 24" class="copyButtonIcon_y97N">
+                                    <path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path>
+                                 </svg>
+                                 <svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS">
+                                    <path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path>
+                                 </svg>
+                              </span>
+                           </button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="blog-header" id="section3">
+               <div class="blog-article header-article">
+                  <div class="blog-big__title">Lag</div>
+                  <p style="text-align: center;">Agregar funciones a tu còdigo</p>
+                  <p style="text-align: center;">Adding functions to your code</p>
+               </div>
+               <div class="blog-article-p">
+                  <h1>Lag (the delightful kind)</h1>
+                  <p>Think of a "lag" like making the element lazy, allowing it to drift from its normal scroll position, taking a certain amount of time to "catch up". You can assign slightly different lags to elements in close proximity to give them a staggered effect when scrolling that's quite pleasing to the eye. If you set effects: true on the ScrollSmoother.create() config, it'll automatically find any elements with the data-lag attribute and apply that effect:</p>
+                  <div class="theme-code-block">
+                     <div class="codeBlockContent_biex">
+                        <pre tabindex="0" class="prism-code language-js codeBlock_bY9V thin-scrollbar">
+                           <code class="codeBlockLines_e6Vv"><span class="token-line" style="color: rgb(191, 199, 213);"><span class="token tag punctuation" style="color: rgb(199, 146, 234);">&lt;</span><span class="token tag" style="color: rgb(255, 85, 114);">div</span><span class="token tag" style="color: rgb(255, 85, 114);"> </span><span class="token tag attr-name" style="color: rgb(255, 203, 107);">data-lag</span><span class="token tag attr-value punctuation attr-equals" style="color: rgb(199, 146, 234);">=</span><span class="token tag attr-value punctuation" style="color: rgb(199, 146, 234);">"</span><span class="token tag attr-value" style="color: rgb(255, 85, 114);">0.5</span><span class="token tag attr-value punctuation" style="color: rgb(199, 146, 234);">"</span><span class="token tag punctuation" style="color: rgb(199, 146, 234);">&gt;</span><span class="token tag punctuation" style="color: rgb(199, 146, 234);">&lt;/</span><span class="token tag" style="color: rgb(255, 85, 114);">div</span><span class="token tag punctuation" style="color: rgb(199, 146, 234);">&gt;</span><span class="token plain"></span><br></span><span class="token-line" style="color: rgb(191, 199, 213);"><span class="token plain"></span><span class="token comment" style="color: rgb(156, 156, 156); font-style: italic;">&lt;!-- takes 0.5 seconds to "catch up" --&gt;</span><span class="token plain"></span><br></span><span class="token-line" style="color: rgb(191, 199, 213);"><span class="token plain"></span><span class="token tag punctuation" style="color: rgb(199, 146, 234);">&lt;</span><span class="token tag" style="color: rgb(255, 85, 114);">div</span><span class="token tag" style="color: rgb(255, 85, 114);"> </span><span class="token tag attr-name" style="color: rgb(255, 203, 107);">data-lag</span><span class="token tag attr-value punctuation attr-equals" style="color: rgb(199, 146, 234);">=</span><span class="token tag attr-value punctuation" style="color: rgb(199, 146, 234);">"</span><span class="token tag attr-value" style="color: rgb(255, 85, 114);">0.8</span><span class="token tag attr-value punctuation" style="color: rgb(199, 146, 234);">"</span><span class="token tag punctuation" style="color: rgb(199, 146, 234);">&gt;</span><span class="token tag punctuation" style="color: rgb(199, 146, 234);">&lt;/</span><span class="token tag" style="color: rgb(255, 85, 114);">div</span><span class="token tag punctuation" style="color: rgb(199, 146, 234);">&gt;</span><span class="token plain"></span><br></span><span class="token-line" style="color: rgb(191, 199, 213);"><span class="token plain"></span><span class="token comment" style="color: rgb(156, 156, 156); font-style: italic;">&lt;!-- takes 0.8 seconds to "catch up" --&gt;</span><br></span></code>
+                        </pre>
+                        <div class="buttonGroup__atx">
+                           <button type="button" aria-label="Copy code to clipboard" title="Copy" class="clean-btn">
+                              <span class="copyButtonIcons_eSgA" aria-hidden="true">
+                                 <svg viewBox="0 0 24 24" class="copyButtonIcon_y97N">
+                                    <path fill="currentColor" d="M19,21H8V7H19M19,5H8A2,2 0 0,0 6,7V21A2,2 0 0,0 8,23H19A2,2 0 0,0 21,21V7A2,2 0 0,0 19,5M16,1H4A2,2 0 0,0 2,3V17H4V3H16V1Z"></path>
+                                 </svg>
+                                 <svg viewBox="0 0 24 24" class="copyButtonSuccessIcon_LjdS">
+                                    <path fill="currentColor" d="M21,7L9,19L3.5,13.5L4.91,12.09L9,16.17L19.59,5.59L21,7Z"></path>
+                                 </svg>
+                              </span>
+                           </button>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+      <div class="navright">
+         <marquee width="100%" direction="left">
+            <span>2D ANIMATIONS</span>
+            <span>3D ANIMATIONS</span>
+            <span>MDX</span>
+         </marquee>
+         <div class="blog-right-title-container">
+            <div class="blog-right-title">
+               Contents
+            </div>
+         </div>
+         <div class="blog-right">
+            <nav class="blog-right-container">
+               <button class="blog-right-page-title" id="section1Btn">Quick Start</button>
+               <button class="blog-right-page-title" id="section2Btn">Speed</button>
+               <button class="blog-right-page-title" id="section3Btn">Lag</button>
+            </nav>
+            <a class="circle" href="../../../3d/3d.html">
+               <div class="circle-title">3D Animations</div>
+               <div class="circle-subtitle">Don't try to be like someone else, be yourself. Be secure with yourself.</div>
+               <div class="circle-footer">Explore</div>
+            </a>
+         </div>
+      </div>
+
+      <!--=============== Scripts ===============-->
+      <script src="../../../../js/plugins/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
+         <!--=============== Scripts GSAP ===============-->
+         <script src='../../../../librarys/gsap/gsap.min.js'></script>
+         <script src='../../../../librarys/gsap/CSSRulePlugin.min.js'></script>
+         <script src='../../../../librarys/gsap/CustomBounce.min.js'></script>
+         <script src='../../../../librarys/gsap/CustomEase.min.js'></script>
+         <script src='../../../../librarys/gsap/CustomWiggle.min.js'></script>
+         <script src='../../../../librarys/gsap/Draggable.min.js'></script>
+         <script src='../../../../librarys/gsap/DrawSVGPlugin.min.js'></script>
+         <script src='../../../../librarys/gsap/EaselPlugin.min.js'></script>
+         <script src='../../../../librarys/gsap/EasePack.min.js'></script>
+         <script src='../../../../librarys/gsap/Flip.min.js'></script>
+         <script src='../../../../librarys/gsap/GSDevTools.min.js'></script>
+         <script src='../../../../librarys/gsap/InertiaPlugin.min.js'></script>
+         <script src='../../../../librarys/gsap/MorphSVGPlugin.min.js'></script>
+         <script src='../../../../librarys/gsap/MotionPathHelper.min.js'></script>
+         <script src='../../../../librarys/gsap/MotionPathPlugin.min.js'></script>
+         <script src='../../../../librarys/gsap/Observer.min.js'></script>
+         <script src='../../../../librarys/gsap/Physics2DPlugin.min.js'></script>
+         <script src='../../../../librarys/gsap/PhysicsPropsPlugin.min.js'></script>
+         <script src='../../../../librarys/gsap/PixiPlugin.min.js'></script>
+         <script src='../../../../librarys/gsap/ScrambleTextPlugin.min.js'></script>
+         <script src='../../../../librarys/gsap/ScrollSmoother.min.js'></script>
+         <script src='../../../../librarys/gsap/ScrollToPlugin.min.js'></script>
+         <script src='../../../../librarys/gsap/ScrollTrigger.min.js'></script>
+         <script src='../../../../librarys/gsap/SplitText.min.js'></script>
+         <script src='../../../../librarys/gsap/TextPlugin.min.js'></script>
+
+      <!--=============== Customs Scripts ===============-->
+      <script src='../../../../js/scrollSmoother.js'></script>
+      <script src='../../../../js/scrollto.js'></script>
+      <script src='../../../../js/splittext.js'></script>
+    </body>
+</html>
