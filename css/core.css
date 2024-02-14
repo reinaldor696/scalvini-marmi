@@ -240,6 +240,10 @@ body {
   align-items: center;
   margin-left: 20px;
 }
+.arrow-button-container img {
+  height: 20px;
+  width: 20px;
+}
 
 .video-container2 {
   display: flex;
@@ -251,11 +255,58 @@ body {
 }
 /* Content Container2 End */
 
-/* Content Container */
+/* Content Container3 */
 .content-container3 {
-  width: 100%;
-  height: 1000px;
-  background-color: purple;
+  width: 100vw;
+  height: 150vh;
+  background-image: url("../media/bapu6818maip_b.1418x0.jpg");
+  background-position: center top;
+  background-size: cover;
+  margin-top: 30vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+.title-container3 {
+  font-size: 50px;
+  line-height: 100px;
+  padding-top: 10vh;
+  padding-left: 5vw;
+  font-weight: lighter;
+}    
+
+.par-content3 {
+  display: flex;
+  align-items: flex-end;
+}
+.par-container3 {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 40vh;
+  padding-right: 8vw;
+}
+.par-content-container3 {
+  font-size: 35px;
+  line-height: 35px;
+  font-weight: 500;
+  margin-bottom: 6vh;
+}
+
+.button-container3 button {
+  border: none;
+  background-color: transparent;
+  border-bottom: 1px solid;
+  cursor: pointer;
+  color: #c9c2ac;
+}
+.content-button-container3 {
+  display: flex;
+  margin-bottom: 15px;
+  font-size: 25px;
+  font-weight: 600;
+}
+.arrow-button-container3 {
+  margin-left: 20px;
 }
 /* Content Container3 End */
 
