@@ -1,20 +1,91 @@
 /*Media queries para trabajar Mobile*/
 @media  screen and (max-width: 479px){
 
-.cursor {
-    display: none;
-}
+
 /* Pre loader */
 
 
 /* Pre loader End */
 
 /* Header */
+.header-container {
+    padding: 0;
+}
 
+.logo-container img {
+    width: 45vw;
+}
+
+.menu-container {
+    font-size: 10px;
+    padding-right: 6vw;
+}
 /* Header End */
 
 /* Content Container1 */
+.title-container {
+    padding: 4rem 2rem 6rem 2rem;
+}
+.title-container h1 {
+    font-size: 39px;
+    line-height: 40px;
+}
 
+.title1 {
+    display: block;
+}
+.title1 span {
+    display: flex;
+}
+.title-margin-container1 {
+    margin-left: 10px;
+}
+.title2 {
+    display: block;
+}
+
+.images-container {
+    padding: 0 1rem 0 1rem;
+}
+
+.img-container1 {
+    margin: 0;
+}
+.img-container1 img {
+    width: 55vw;
+    height: 22vw;
+}
+
+.img-container2-a img {
+    width: 22vw;
+    object-fit: cover;
+}
+
+.img-container2-b img {
+    width: 17vw;
+    object-fit: cover;
+}
+
+.img-container3-a {
+    margin: 0;
+}
+.img-container3-a img {
+    width: 18vw;
+    height: 10vh;
+    object-fit: cover;
+}
+
+.img-container3-b img {
+    width: 36vw;
+    height: 22vw;
+    object-fit: cover;
+}
+
+.video-container2 {
+    width: 35vw;
+    height: 35vh;
+    object-fit: cover;
+}
 /* Content Container1 End*/
 
 /* Content Container2 */
