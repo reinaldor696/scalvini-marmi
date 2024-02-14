@@ -268,7 +268,7 @@ body {
 }
 
 .title-container3 {
-  font-size: 50px;
+  font-size: 45px;
   line-height: 100px;
   padding-top: 10vh;
   padding-left: 5vw;
@@ -286,7 +286,7 @@ body {
   padding-right: 8vw;
 }
 .par-content-container3 {
-  font-size: 35px;
+  font-size: 25px;
   line-height: 35px;
   font-weight: 500;
   margin-bottom: 6vh;
@@ -302,7 +302,7 @@ body {
 .content-button-container3 {
   display: flex;
   margin-bottom: 15px;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: 600;
 }
 .arrow-button-container3 {
@@ -376,14 +376,14 @@ body {
   align-items: center;
   justify-content: center;
 }
-
 .content-footer {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
+
 .title-footer {
-  font-size: 60px;
+  font-size: 40px;
   margin-bottom: 7vh;
 }
 
@@ -402,9 +402,6 @@ body {
   align-items: center;
   font-size: 25px;
 }
-
-
-
 /* Footer End */
 
 /* Body */
