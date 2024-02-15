@@ -142,7 +142,41 @@
 /* Content Container2 End*/
 
 /* Content Container3 */
+.content-container3 {
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    height: 110vh;
+}
 
+.title-container3 {
+    font-size: 21px;
+    line-height: 40px
+}
+
+.par-content3 {
+    display: flex;
+    justify-content: center;
+}
+
+.par-container3 {
+    padding: 0 0 23vh 15vw;
+}
+
+.par-content-container3 {
+    font-size: 20px;
+    line-height: 25px;
+    margin-bottom: 10vh;
+}
+
+.content-button-container3 {
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.arrow-button-container3 img {
+    width: 12px;
+}
 /* Content Container3 End*/
 
 /* Content Container4 */
