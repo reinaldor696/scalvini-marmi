@@ -25,7 +25,7 @@
 /* Content Container1 */
 .title-container {
     padding: 0rem 2rem 0rem 2rem;
-    margin-bottom: 18vh;
+    margin-bottom: 11vh;
 }
 .title-container h1 {
     font-size: 32px;
@@ -54,8 +54,8 @@
     margin: 0;
 }
 .img-container1 img {
-    width: 55vw;
-    height: 24vh;
+    width: 60vw;
+    height: 15vh;
 }
 
 .img-container2-a img {
