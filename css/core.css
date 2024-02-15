@@ -111,8 +111,8 @@ body {
   margin-bottom: 20vh;
 }
 .title-container h1 {
-  font-size: 150px;
-  line-height: 158px;
+  font-size: 105px;
+  line-height: 100px;
 }
 
 .title1 {
@@ -187,9 +187,9 @@ body {
 
 .title-container2 {
   width: 100%;
-  font-size: 60px;
+  font-size: 50px;
   line-height: 110px;
-  margin-bottom: 20vh;
+  margin-bottom: 15vh;
   padding: 30vh 6rem 0 6rem;
 }
 .title-b {
@@ -220,6 +220,10 @@ body {
   margin-top: -8vh;
   display: flex;
 }
+.image-container2 img {
+  width: 40vw;
+  height: 100vh;
+}
 
 .par-vid-container2 {
   display: flex;
@@ -229,7 +233,7 @@ body {
     padding-right: 3vw;
 }
 .par-content {
-  font-size: 35px;
+  font-size: 30px;
   line-height: 35px;
   font-weight: 500;
   margin-bottom: 6vh;
@@ -285,7 +289,7 @@ body {
 }
 
 .title-container3 {
-  font-size: 45px;
+  font-size: 40px;
   line-height: 100px;
   padding-top: 10vh;
   padding-left: 5vw;
@@ -299,8 +303,9 @@ body {
 .par-container3 {
   display: flex;
   flex-direction: column;
-  padding-bottom: 40vh;
-  padding-right: 8vw;
+  padding-bottom: 36vh;
+  margin-right: 1vw;
+  width: 40vw;
 }
 .par-content-container3 {
   font-size: 25px;
