@@ -32,7 +32,8 @@
 }
 
 .title1 {
-    display: block;
+    display: flex;
+    justify-content: flex-start;
 }
 .title1 span {
     display: flex;
@@ -89,7 +90,55 @@
 /* Content Container1 End*/
 
 /* Content Container2 */
+.title-container2 {
+    font-size: 14px;
+    line-height: 40px;
+    padding: 6rem 2rem 0 2rem;
+    margin-bottom: 10vh;
+}
 
+.title-span {
+    display: flex;
+}
+
+.title-b{
+    display: block;
+    margin-left: 10px;
+}
+
+.title-c {
+    display: block;
+}
+
+.image-container2 img {
+    width: 55vw;
+}
+
+.par-container2 {
+    margin-right: 2rem;
+    margin-bottom: 10vh;
+}
+
+.par-content {
+    font-size: 19px;
+    line-height: 20px;
+}
+
+.content-button p {
+    font-size: 15px;
+}
+
+.image-container2 {
+    margin: 0;
+}
+
+.video-container3 {
+    margin-right: 2rem;
+}
+.video-container3 video {
+    width: 25vw;
+    height: 29vh;
+}
 /* Content Container2 End*/
 
 /* Content Container3 */
