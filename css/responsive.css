@@ -222,7 +222,21 @@
 /* Content Container4 End*/
 
 /* Footer */
+.footer-container {
+    height: 70vh;
+}
 
+.title-footer {
+    font-size: 22px;
+}
+
+.social-media {
+    font-size: 16px;
+}
+
+.privacy-policy {
+    font-size: 16px;
+}
 /* Footer End*/
 }
 
