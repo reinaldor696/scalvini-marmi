@@ -94,7 +94,7 @@ body {
   align-items: center;
 }
 
-.menu-social-media  button {
+.menu-social-media button {
   margin: 0 2vw 0 4vw;
   height: 5vh;
   width: 10vw;
@@ -102,6 +102,10 @@ body {
   border-radius: 50px;
   border-color: #c9c2ac;
   color: #c9c2ac;
+}
+.menu-social-media span {
+  display: flex;
+  flex-direction: row;
 }
 
 .margin-contact {
