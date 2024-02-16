@@ -84,8 +84,8 @@
 }
 
 .video-container2 {
-    width: 35vw;
-    height: 22vh;
+    width: 26vw;
+    height: 33vh;
     object-fit: cover;
 }
 /* Content Container1 End*/
@@ -113,7 +113,7 @@
 
 .image-container2 img {
     width: 55vw;
-    height: 37vh;
+    height: 60vh;
 }
 
 .par-container2 {
@@ -140,7 +140,7 @@
 }
 .video-container3 video {
     width: 25vw;
-    height: 15vh;
+    height: 26vh;
 }
 /* Content Container2 End*/
 
@@ -240,6 +240,7 @@
 
 .privacy-policy {
     font-size: 12px;
+    text-decoration: none;
 }
 /* Footer End*/
 }
