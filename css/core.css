@@ -152,10 +152,8 @@ body {
 }
 
 .menu-container {
-  position: fixed;
-  z-index: 10;
-  top: 15vh;
-  right: 8vw;
+  display: flex;
+  align-items: center;
 }
 .menu-container button {
   display: flex;
