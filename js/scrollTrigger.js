@@ -426,6 +426,23 @@ parEffectContainer1();
 /* Content Container1 End */
 
 /* Content Container2 */
+
+function titleContainer2() {
+
+    const tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".title-container2",
+            start: "200 600",
+            end: "200 400",
+            toggleActions: "play completed",
+        }
+    });
+    
+    gsap.set(".title-container2", {y: "100%", opacity: 0,}, "-=1");
+
+    tl.to(".title-container2", {y: 0, opacity: 1, duration: 1, ease: "power3.in", delay: 0.5,}, "-=1");
+}
+titleContainer2();
 /*
 function imgEffectContainer2() {
     mm.add("(min-width: 480px)", () => {
