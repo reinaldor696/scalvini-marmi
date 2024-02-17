@@ -435,12 +435,20 @@ function titleContainer2() {
             start: "200 600",
             end: "200 400",
             toggleActions: "play completed",
+            markers: true,
         }
     });
     
-    gsap.set(".title-container2", {y: "100%", opacity: 0,}, "-=1");
+    to.set(".title-container2", {opacity: 0,}, "-=1");
 
-    tl.to(".title-container2", {y: 0, opacity: 1, duration: 1, ease: "power3.in", delay: 0.5,});
+    tl.to(".title-container2", {
+        y: "-50%",
+        opacity: 1,
+        duration: 1,
+        ease: "power3.in",
+        delay: 0.5,
+        stagger: true,
+    });
 }
 titleContainer2();
 /*
