@@ -202,6 +202,54 @@ function firstEffectContainer1() {
     });
 }
 firstEffectContainer1();
+
+function imgEffectContainer1() {
+
+    const tl1 = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".images-container",
+                start: "0 center",
+                end: "center center",
+                scrub: true,
+                markers: true,
+            }
+    });
+
+    tl1.set(".img-container1", {y: "100%"}, "-=1");
+    tl1.set(".img-container2-a", {x: "100%"}, "-=1");
+    tl1.set(".img-container2-b", {x: "-100%"}, "-=1");
+    tl1.set(".img-container3-a", {x: "100%", y: "-100%"}, "-=1");
+    tl1.set(".img-container3-b", {x: "-15%",y: "-100%"}, "-=1");
+
+    tl1.to(".img-container1, .img-container2-a, .img-container2-b, .img-container3-a, .img-container3-b", {x: 0, y:0, duration: 1});
+}
+imgEffectContainer1();
+
+function videoEffectContainer1() {
+    const tl2 = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".images-container1",
+            start: "center center",
+            end: "bottom center",
+            scrub: true,
+            markers: true,
+        }
+    }); 
+
+
+    tl2.to(".video-container2", {width: "100vw", height: "100vh", pin: true});
+    
+    tl2.to(".img-container1", {y: "-100vh", duration: 1, opacity: 0});
+
+    tl2.to(".img-container2-a", {x: "-100vw", duration: 1, opacity: 0},"-=1");
+
+    tl2.to(".img-container2-b", {x: "100vw", duration: 1, opacity: 0},"-=1");
+
+    tl2.to(".img-container3-a", {x: "-100vw", y: "100vh", duration: 1, opacity: 0},"-=1");
+
+    tl2.to(".img-container3-b", {y: "100vh", duration: 1, opacity: 0},"-=1");
+}
+videoEffectContainer1();
 /*
 function firstEffectContainer1() {
     gsap.to(".title-container h1", {

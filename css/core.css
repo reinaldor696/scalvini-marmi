@@ -205,12 +205,15 @@ body {
   display: flex;
   justify-content: center;
   margin-left: 8rem;
+  position: relative;
+  z-index: 8;
 }
 .img-container2 {
   display: flex;
   justify-content: center;
   margin-top: 20px;
   margin-bottom: 20px;
+  overflow: hidden;
 }
 .img-container3 {
   display: flex;
@@ -225,30 +228,39 @@ body {
   display: flex;
   align-items: flex-end;
   margin-right: 20px;
+  position: relative;
+  z-index: 5;
 }
 .img-container2-a img {
-  width: 20vw;
+  width: 15vw;
 }
 .video-container {
   display: flex;
+  justify-content: center;
 }
 .video-container2 {
   width: 38vw
 }
 .img-container2-b {
   margin-left: 20px;
+  position: relative;
+  z-index: 5;
 }
 .img-container2-b img {
   width: 15vw;
 }
 .img-container3-a {
   margin-right: 30px;
+  position: relative;
+  z-index: 6;
 }
 .img-container3-a img {
   width: 15vw;
 }
 .img-container3-b {
   margin-left: 30px;
+  position: relative;
+  z-index: 7;
 }
 .img-container3-b img {
   width: 40vw;
