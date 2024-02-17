@@ -211,7 +211,6 @@ function imgEffectContainer1() {
                 start: "0 center",
                 end: "center center",
                 scrub: true,
-                markers: true,
             }
     });
 
@@ -228,11 +227,10 @@ imgEffectContainer1();
 function videoEffectContainer1() {
     const tl2 = gsap.timeline({
         scrollTrigger: {
-            trigger: ".images-container1",
+            trigger: ".images-container",
             start: "center center",
             end: "bottom center",
             scrub: true,
-            markers: true,
         }
     }); 
 
