@@ -55,13 +55,30 @@ function menuButton() {
     const menuButton = document.querySelector(".menu-container");
     const menuButtonClosed = document.querySelector(".closed-menu");
 
+    
+
     menuButton.addEventListener("click", () => {
-        gsap.to(content, {
+        const tl = gsap.timeline();
+
+        tl.to(content, {
             y: "20vh",
             scale: 0.9,
             duration: 1,
             ease: "power2.inOut",
         });
+
+
+        tl.set(".home-li, .about-li, .manufacturing-li, .creations-li", {
+            y: "100%",
+            opacity: 0,
+        }, "-= 1");
+
+        tl.to(".home-li, .about-li, .manufacturing-li, .creations-li", {
+            stagger: 0.2,
+            y: 0,
+            opacity: 1,
+            duration: 1,
+        }, "-= 0.2");
         
         document.body.style.overflow = 'hidden';   
     });

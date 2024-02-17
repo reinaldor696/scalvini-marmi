@@ -8,13 +8,16 @@
 /* Pre loader End */
 
 /* Menu Content */
+.list-container {
+    margin-bottom: 5vh
+}
 .list-container ul {
     font-size: 25px;
     line-height: 31px;
 }
 
 .menu-sign {
-    padding-top: 1vh;
+    padding: 0
 }
 
 .menu-social-media {
@@ -25,7 +28,7 @@
 .menu-social-media span {
     display: flex;
     flex-direction: row;
-    margin: 10vh 0 8vh 3vw
+    margin: 5vh 0 8vh 3vw
 }
 .menu-social-media button {
     height: 4vh;
