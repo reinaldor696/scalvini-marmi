@@ -432,14 +432,14 @@ function titleContainer2() {
     const tl = gsap.timeline({
         scrollTrigger: {
             trigger: ".title-container2",
-            start: "200 600",
-            end: "200 400",
+            start: "500 600",
+            end: "500 400",
             toggleActions: "play completed",
             markers: true,
         }
     });
     
-    to.set(".title-container2", {opacity: 0,}, "-=1");
+    tl.set(".title-container2", {opacity: 0,}, "-=1");
 
     tl.to(".title-container2", {
         y: "-50%",
@@ -451,6 +451,28 @@ function titleContainer2() {
     });
 }
 titleContainer2();
+
+function parContent() {
+    const tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".par-content",
+            start: "200 600",
+            end: "200 400",
+            toggleActions: "play completed",
+            markers: true,
+        }
+    });
+    
+    tl.set(".par-content", {opacity: 0,}, "-=1");
+
+    tl.to(".par-content", {
+        y: "-40vh",
+        opacity: 1,
+        duration: 1,
+        ease: "power3.in",
+        stagger: true,
+    });
+} parContent();
 /*
 function imgEffectContainer2() {
     mm.add("(min-width: 480px)", () => {
