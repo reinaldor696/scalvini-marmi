@@ -52,10 +52,9 @@ preLoader();
 function menuButton() {
 
     const content = document.querySelector(".content");
+
     const menuButton = document.querySelector(".menu-container");
     const menuButtonClosed = document.querySelector(".closed-menu");
-
-    
 
     menuButton.addEventListener("click", () => {
         const tl = gsap.timeline();
@@ -97,6 +96,17 @@ function menuButton() {
 }
 menuButton();
 
+function firstEffectHeader() {
+    gsap.set(".logo-container, .menu-container", {
+        opacity: 0,
+    });
+    gsap.to(".logo-container, .menu-container", {
+        opacity: 1,
+        duration: 1,
+        delay: 0.5,
+    });
+}
+firstEffectHeader();
     /*
     
     
@@ -178,6 +188,20 @@ menuEffect();
 /* Header End*/
 
 /* Content Container1 */
+function firstEffectContainer1() {
+    gsap.set(".title1, .title2, .title3", {
+        opacity: 0,
+        y: "100%",
+    });
+    gsap.to(".title1, .title2, .title3", {
+        opacity: 1,
+        duration: 0.5,
+        y: 0,
+        stagger: 0.1,
+        delay: 0.5,
+    });
+}
+firstEffectContainer1();
 /*
 function firstEffectContainer1() {
     gsap.to(".title-container h1", {
