@@ -435,7 +435,6 @@ function titleContainer2() {
             start: "500 600",
             end: "500 400",
             toggleActions: "play completed",
-            markers: true,
         }
     });
     
@@ -452,14 +451,14 @@ function titleContainer2() {
 }
 titleContainer2();
 
-function parContent() {
+function contentContainer2() {
+    
     const tl = gsap.timeline({
         scrollTrigger: {
             trigger: ".par-content",
             start: "200 600",
             end: "200 400",
             toggleActions: "play completed",
-            markers: true,
         }
     });
     
@@ -472,7 +471,17 @@ function parContent() {
         ease: "power3.in",
         stagger: true,
     });
-} parContent();
+
+    tl.set(".button-container2", {opacity: 0});
+    tl.set(".image-container2", {opacity: 0}, "-=1");
+
+    tl.to(".button-container2", {y: "-40vh", opacity: 1, delay: 0.5});
+    tl.to(".image-container2", {y: "-40vh", opacity: 1,  delay: 0.5}, "-=1");
+
+    tl.set(".video-container3", {opacity: 0}, "-=1");
+    tl.to(".video-container3", {y: "-40vh", opacity: 1, delay: 0.5});
+} 
+contentContainer2();
 /*
 function imgEffectContainer2() {
     mm.add("(min-width: 480px)", () => {
