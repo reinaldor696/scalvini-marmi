@@ -440,7 +440,7 @@ function titleContainer2() {
     
     gsap.set(".title-container2", {y: "100%", opacity: 0,}, "-=1");
 
-    tl.to(".title-container2", {y: 0, opacity: 1, duration: 1, ease: "power3.in", delay: 0.5,}, "-=1");
+    tl.to(".title-container2", {y: 0, opacity: 1, duration: 1, ease: "power3.in", delay: 0.5,});
 }
 titleContainer2();
 /*
