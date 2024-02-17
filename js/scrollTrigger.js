@@ -49,6 +49,69 @@ preLoader();
 /* Pre Loader End*/
 
 /* Header */
+function menuButton() {
+
+    const content = document.querySelector(".content");
+    const menuButton = document.querySelector(".menu-container");
+    const menuButtonClosed = document.querySelector(".closed-menu");
+
+    menuButton.addEventListener("click", () => {
+        gsap.to(content, {
+            y: "20vh",
+            scale: 0.9,
+            duration: 1,
+            ease: "power2.inOut",
+        });
+        
+        document.body.style.overflow = 'hidden';   
+    });
+
+    
+    menuButtonClosed.addEventListener("click", () => {    
+        gsap.to(content, {
+            y: 0,
+            scale: 1,
+            duration: 1,
+            ease: "power2.inOut",
+        });
+
+        document.body.style.overflow = '';
+    });
+}
+menuButton();
+
+    /*
+    
+    
+    
+    tl.set(".home-li, .portfolio-li, .about-li, .contact-li, .more-li", {y: "100vh"});
+
+    tl.to(".home-li, .portfolio-li, .about-li, .contact-li, .more-li", {
+        y: 0,
+        duration: 1,
+        stagger: 0.1,
+    });  
+    
+    tl.then(() => {
+        menuButtonClosed.addEventListener("click", () => {
+            
+            tl.set(".home-li, .portfolio-li, .about-li, contact-li, more-li", {y: 0});
+
+            tl.to(".home-li, .portfolio-li, .about-li, .contact-li, .more-li", {
+                y: "-100vh",
+                duration: 1,
+                stagger: 0.1,
+            });
+
+            tl.then(() => {
+                content.style.display = "block";
+                menuContent.classList.remove("visible");
+            });
+        });
+    });
+    });*/
+
+
 /*
 function firstEffectHeader() {
     gsap.to(".logo-container img", {
@@ -94,47 +157,7 @@ function menuEffect() {
 }
 menuEffect();
 
-function menuButton() {
-    const menuButton = document.querySelector(".menu-button");
-    const menuContent = document.querySelector(".menu-content");
-    const menuButtonClosed = document.querySelector(".closed-menu");
-    const content = document.querySelector("#content1");
 
-    menuButton.addEventListener("click", () => {
-    menuContent.classList.add("visible");
-    
-    content.style.display = "none";
-
-    const tl = gsap.timeline();
-    
-    tl.set(".home-li, .portfolio-li, .about-li, .contact-li, .more-li", {y: "100vh"});
-
-    tl.to(".home-li, .portfolio-li, .about-li, .contact-li, .more-li", {
-        y: 0,
-        duration: 1,
-        stagger: 0.1,
-    });  
-    
-    tl.then(() => {
-        menuButtonClosed.addEventListener("click", () => {
-            
-            tl.set(".home-li, .portfolio-li, .about-li, contact-li, more-li", {y: 0});
-
-            tl.to(".home-li, .portfolio-li, .about-li, .contact-li, .more-li", {
-                y: "-100vh",
-                duration: 1,
-                stagger: 0.1,
-            });
-
-            tl.then(() => {
-                content.style.display = "block";
-                menuContent.classList.remove("visible");
-            });
-        });
-    });
-    });
-}
-menuButton();
 /* Header End*/
 
 /* Content Container1 */
