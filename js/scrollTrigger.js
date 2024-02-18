@@ -590,10 +590,9 @@ function parContent() {
     const tl = gsap.timeline({
         scrollTrigger: {
             trigger: ".par-content-container3",
-            start: "top 650",
-            end: "bottom 650",
+            start: "top 150",
+            end: "bottom 150",
             toggleActions: "play completed",
-            markers: true,
             pinReparent: true,
         },
     });
@@ -603,7 +602,7 @@ function parContent() {
 
     tl.to(".par-content-container3 p", {y: 0, opacity:1, duration: 1});
 
-    tl.to(".button-container3", {y: 0, opacity:1, duration: 1, delay: 0.5});
+    tl.to(".button-container3", {y: 0, opacity:1, duration: 1,});
 }
 parContent();
 /*
