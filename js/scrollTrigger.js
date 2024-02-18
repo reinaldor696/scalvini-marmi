@@ -438,7 +438,7 @@ function titleContainer2() {
         }
     });
     
-    tl.set(".title-container2", {opacity: 0,}, "-=1");
+    gsap.set(".title-container2", {opacity: 0,}, "-=1");
 
     tl.to(".title-container2", {
         y: "-50%",
@@ -452,7 +452,7 @@ function titleContainer2() {
 titleContainer2();
 
 function contentContainer2() {
-    
+
     const tl = gsap.timeline({
         scrollTrigger: {
             trigger: ".par-content",
@@ -462,7 +462,7 @@ function contentContainer2() {
         }
     });
     
-    tl.set(".par-content", {opacity: 0,}, "-=1");
+    gsap.set(".par-content", {opacity: 0,}, "-=1");
 
     tl.to(".par-content", {
         y: "-40vh",
@@ -472,13 +472,13 @@ function contentContainer2() {
         stagger: true,
     });
 
-    tl.set(".button-container2", {opacity: 0});
-    tl.set(".image-container2", {opacity: 0}, "-=1");
+    gsap.set(".button-container2", {opacity: 0});
+    gsap.set(".image-container2", {opacity: 0}, "-=1");
 
     tl.to(".button-container2", {y: "-40vh", opacity: 1, delay: 0.5});
     tl.to(".image-container2", {y: "-40vh", opacity: 1,  delay: 0.5}, "-=1");
 
-    tl.set(".video-container3", {opacity: 0}, "-=1");
+    gsap.set(".video-container3", {opacity: 0}, "-=1");
     tl.to(".video-container3", {y: "-40vh", opacity: 1, delay: 0.5});
 } 
 contentContainer2();
@@ -569,6 +569,22 @@ buttonEffectContainer2();
 /* Content Container2 End */
 
 /* Content Container3 */
+function titleContainer3() {
+
+    const tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".title-container3 h1",
+            start: "top center",
+            end: "bottom center",
+            toggleActions: "play completed",
+        }
+    });
+
+    gsap.set(".title-container3 h1", {opacity: 0, y: "100%"});
+
+    tl.to(".title-container3 h1", {y: 0, opacity:1, duration: 1});
+}
+titleContainer3();
 /*
 function topEffectContainer() {
     gsap.to(".content-container3", {
