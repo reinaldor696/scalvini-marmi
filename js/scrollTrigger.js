@@ -585,6 +585,27 @@ function titleContainer3() {
     tl.to(".title-container3 h1", {y: 0, opacity:1, duration: 1});
 }
 titleContainer3();
+
+function parContent() {
+    const tl = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".par-content-container3",
+            start: "top 650",
+            end: "bottom 650",
+            toggleActions: "play completed",
+            markers: true,
+            pinReparent: true,
+        },
+    });
+
+    gsap.set(".par-content-container3 p", {opacity: 0, y: "100%"});
+    gsap.set(".button-container3", {opacity: 0, y: "100%"});
+
+    tl.to(".par-content-container3 p", {y: 0, opacity:1, duration: 1});
+
+    tl.to(".button-container3", {y: 0, opacity:1, duration: 1, delay: 0.5});
+}
+parContent();
 /*
 function topEffectContainer() {
     gsap.to(".content-container3", {
