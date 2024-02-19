@@ -147,7 +147,6 @@ function videoEffectContainer1() {
                 start: "center center",
                 end: "bottom center",
                 scrub: true,
-                markers: true,
             }
         }); 
     
@@ -326,7 +325,8 @@ parContent();
 /* Content Container4 */
 function contentContainer4() {
 
-    const tl = gsap.timeline({
+    mm.add("(min-width: 480px)", () => {
+        const tl = gsap.timeline({
         scrollTrigger: {
             trigger: ".images-container4",
             start: "top 50",
@@ -350,6 +350,35 @@ function contentContainer4() {
         duration: 1,
         stagger: 0.2
     }, "-= 0.5");
+    });
+
+    mm.add("(max-width: 479px)", () => {
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".images-container4",
+                start: "top 50",
+                end: "bottom 50",
+                toggleActions: "play completed",
+            },
+        });
+    
+        gsap.set(".image2-container4, .image3-container4, .image4-container4, .image5-container4", {
+            height: "0%",
+        });
+    
+        tl.to(".image4-container4, .image5-container4", {
+            height: "60%",
+            duration: 1,
+            stagger: 0.2
+        });
+    
+        tl.to(".image2-container4, .image3-container4", {
+            height: "30%",
+            duration: 1,
+            stagger: 0.2
+        }, "-= 0.5");
+    });
+    
 }
 contentContainer4();
 /* Content Container4 End */
