@@ -356,9 +356,10 @@ function contentContainer4() {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: ".images-container4",
-                start: "top 50",
-                end: "bottom 50",
+                start: "center -200",
+                end: "bottom -200",
                 toggleActions: "play completed",
+                markers: true
             },
         });
     
