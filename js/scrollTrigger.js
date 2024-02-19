@@ -139,27 +139,58 @@ function imgEffectContainer1() {
 imgEffectContainer1();
 
 function videoEffectContainer1() {
-    const tl2 = gsap.timeline({
-        scrollTrigger: {
-            trigger: ".images-container",
-            start: "center center",
-            end: "bottom center",
-            scrub: true,
-        }
-    }); 
 
-
-    tl2.to(".video-container2", {width: "100vw", height: "100vh", pin: true});
+    mm.add("(min-width: 480px)", () => {
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".images-container",
+                start: "center center",
+                end: "bottom center",
+                scrub: true,
+                markers: true,
+            }
+        }); 
     
-    tl2.to(".img-container1", {y: "-100vh", duration: 1, opacity: 0});
+    
+        tl.to(".video-container2", {width: "100vw", height: "100vh", pin: true});
+        
+        tl.to(".img-container1", {y: "-100vh", duration: 1, opacity: 0});
+    
+        tl.to(".img-container2-a", {x: "-100vw", duration: 1, opacity: 0},"-=1");
+    
+        tl.to(".img-container2-b", {x: "100vw", duration: 1, opacity: 0},"-=1");
+    
+        tl.to(".img-container3-a", {x: "-100vw", y: "100vh", duration: 1, opacity: 0},"-=1");
+    
+        tl.to(".img-container3-b", {y: "100vh", duration: 1, opacity: 0},"-=1");
+    });
+    
 
-    tl2.to(".img-container2-a", {x: "-100vw", duration: 1, opacity: 0},"-=1");
+    mm.add("(max-width: 479px)", () => {
 
-    tl2.to(".img-container2-b", {x: "100vw", duration: 1, opacity: 0},"-=1");
-
-    tl2.to(".img-container3-a", {x: "-100vw", y: "100vh", duration: 1, opacity: 0},"-=1");
-
-    tl2.to(".img-container3-b", {y: "100vh", duration: 1, opacity: 0},"-=1");
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".images-container",
+                start: "center 150",
+                end: "bottom 150",
+                scrub: true,
+                markers: true,
+            }
+        }); 
+    
+    
+        tl.to(".video-container2", {width: "100vw", height: "100vh", pin: true});
+        
+        tl.to(".img-container1", {y: "-100vh", duration: 1, opacity: 0});
+    
+        tl.to(".img-container2-a", {x: "-100vw", duration: 1, opacity: 0},"-=1");
+    
+        tl.to(".img-container2-b", {x: "100vw", duration: 1, opacity: 0},"-=1");
+    
+        tl.to(".img-container3-a", {x: "-100vw", y: "100vh", duration: 1, opacity: 0},"-=1");
+    
+        tl.to(".img-container3-b", {y: "100vh", duration: 1, opacity: 0},"-=1");
+    });
 }
 videoEffectContainer1();
 /* Content Container1 End */
