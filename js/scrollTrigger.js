@@ -359,7 +359,7 @@ function contentContainer4() {
                 start: "center -200",
                 end: "bottom -200",
                 toggleActions: "play completed",
-                markers: true
+                markers: false
             },
         });
     
