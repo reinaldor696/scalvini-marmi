@@ -196,7 +196,7 @@ videoEffectContainer1();
 
 /* Content Container2 */
 function titleContainer2() {
-
+    
     const tl = gsap.timeline({
         scrollTrigger: {
             trigger: ".title-container2",
@@ -212,8 +212,6 @@ function titleContainer2() {
         y: "-50%",
         opacity: 1,
         duration: 1,
-        ease: "power3.in",
-        delay: 0.5,
         stagger: true,
     });
 }
@@ -221,33 +219,69 @@ titleContainer2();
 
 function contentContainer2() {
 
-    const tl = gsap.timeline({
-        scrollTrigger: {
-            trigger: ".par-content",
-            start: "200 600",
-            end: "200 400",
-            toggleActions: "play completed",
-        }
+    mm.add("(min-width: 480px)", () => {
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".par-content",
+                start: "200 600",
+                end: "200 400",
+                toggleActions: "play completed",
+            }
+        });
+        
+        gsap.set(".par-content", {opacity: 0,}, "-=1");
+    
+        tl.to(".par-content", {
+            y: "-40vh",
+            opacity: 1,
+            duration: 1,
+            ease: "power3.in",
+            stagger: true,
+        });
+    
+        gsap.set(".button-container2", {opacity: 0});
+        gsap.set(".image-container2", {opacity: 0}, "-=1");
+    
+        tl.to(".button-container2", {y: "-40vh", opacity: 1, delay: 0.5});
+        tl.to(".image-container2", {y: "-40vh", opacity: 1,  delay: 0.5}, "-=1");
+    
+        gsap.set(".video-container3", {opacity: 0}, "-=1");
+        tl.to(".video-container3", {y: "-40vh", opacity: 1, delay: 0.5});
+    });
+
+    mm.add("(max-width: 479px)", () => {
+
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".par-content",
+                start: "200 600",
+                end: "200 400",
+                toggleActions: "play completed",
+                markers: true,
+            }
+        });
+        
+        gsap.set(".par-content", {opacity: 0,}, "-=1");
+    
+        tl.to(".par-content", {
+            y: "-20vh",
+            opacity: 1,
+            duration: 1,
+            ease: "power3.in",
+            stagger: true,
+            delay: 0.5,
+        });
+    
+        gsap.set(".button-container2", {opacity: 0});
+        gsap.set(".image-container2", {opacity: 0}, "-=1");
+    
+        tl.to(".button-container2", {y: "-30vh", opacity: 1, delay: 0.8});
+        tl.to(".image-container2", {y: "-20vh", opacity: 1,  delay: 0.8}, "-=1");
+    
+        gsap.set(".video-container3", {opacity: 0}, "-=1");
+        tl.to(".video-container3", {y: "-20vh", opacity: 1, delay: 0.8});
     });
     
-    gsap.set(".par-content", {opacity: 0,}, "-=1");
-
-    tl.to(".par-content", {
-        y: "-40vh",
-        opacity: 1,
-        duration: 1,
-        ease: "power3.in",
-        stagger: true,
-    });
-
-    gsap.set(".button-container2", {opacity: 0});
-    gsap.set(".image-container2", {opacity: 0}, "-=1");
-
-    tl.to(".button-container2", {y: "-40vh", opacity: 1, delay: 0.5});
-    tl.to(".image-container2", {y: "-40vh", opacity: 1,  delay: 0.5}, "-=1");
-
-    gsap.set(".video-container3", {opacity: 0}, "-=1");
-    tl.to(".video-container3", {y: "-40vh", opacity: 1, delay: 0.5});
 } 
 contentContainer2();
 /* Content Container2 End */
