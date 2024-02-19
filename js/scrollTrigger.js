@@ -261,7 +261,7 @@ function contentContainer2() {
             }
         });
         
-        gsap.set(".par-content", {opacity: 0,}, "-=1");
+        gsap.set(".par-content", {opacity: 0, y: "30vh"}, "-=1");
     
         tl.to(".par-content", {
             y: "-20vh",
@@ -272,8 +272,8 @@ function contentContainer2() {
             delay: 0.5,
         });
     
-        gsap.set(".button-container2", {opacity: 0});
-        gsap.set(".image-container2", {opacity: 0}, "-=1");
+        gsap.set(".button-container2", {opacity: 0, y: "30vh"});
+        gsap.set(".image-container2", {opacity: 0, y: "30vh"}, "-=1");
     
         tl.to(".button-container2", {y: "-30vh", opacity: 1, delay: 0.8});
         tl.to(".image-container2", {y: "-20vh", opacity: 1,  delay: 0.8}, "-=1");
