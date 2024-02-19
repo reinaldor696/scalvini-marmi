@@ -140,7 +140,7 @@ imgEffectContainer1();
 
 function videoEffectContainer1() {
 
-    mm.add("(min-width: 480px)", () => {
+    if (matchMedia("(min-width: 480px)").matches) {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: ".images-container",
@@ -162,22 +162,18 @@ function videoEffectContainer1() {
         tl.to(".img-container3-a", {x: "-100vw", y: "100vh", duration: 1, opacity: 0},"-=1");
     
         tl.to(".img-container3-b", {y: "100vh", duration: 1, opacity: 0},"-=1");
-    });
-    
-
-    mm.add("(max-width: 479px)", () => {
-
+    } else {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: ".images-container",
-                start: "center 150",
+                start: "top 150",
                 end: "bottom 150",
                 scrub: true,
             }
         }); 
     
     
-        tl.to(".video-container2", {width: "100vw", height: "100vh", pin: true, pinSpacing: true});
+        tl.to(".video-container2", {width: "100vw", height: "100vh", pin: true, pinSpacing: true, duration: 5});
         
         tl.to(".img-container1", {y: "-100vh", duration: 1, opacity: 0});
     
@@ -188,7 +184,7 @@ function videoEffectContainer1() {
         tl.to(".img-container3-a", {x: "-100vw", y: "100vh", duration: 1, opacity: 0},"-=1");
     
         tl.to(".img-container3-b", {y: "100vh", duration: 1, opacity: 0},"-=1");
-    });
+    }
 }
 videoEffectContainer1();
 /* Content Container1 End */
@@ -218,7 +214,7 @@ titleContainer2();
 
 function contentContainer2() {
 
-    mm.add("(min-width: 480px)", () => {
+    if (matchMedia("(min-width: 480px)").matches) {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: ".par-content",
@@ -246,10 +242,7 @@ function contentContainer2() {
     
         gsap.set(".video-container3", {opacity: 0}, "-=1");
         tl.to(".video-container3", {y: "-40vh", opacity: 1, delay: 0.5});
-    });
-
-    mm.add("(max-width: 479px)", () => {
-
+    } else {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: ".par-content",
@@ -278,8 +271,7 @@ function contentContainer2() {
     
         gsap.set(".video-container3", {opacity: 0}, "-=1");
         tl.to(".video-container3", {y: "-20vh", opacity: 1, delay: 0.8});
-    });
-    
+    }
 } 
 contentContainer2();
 /* Content Container2 End */
@@ -325,34 +317,32 @@ parContent();
 /* Content Container4 */
 function contentContainer4() {
 
-    mm.add("(min-width: 480px)", () => {
+    if (matchMedia("(min-width: 480px)").matches) {
         const tl = gsap.timeline({
-        scrollTrigger: {
-            trigger: ".images-container4",
-            start: "top 50",
-            end: "bottom 50",
-            toggleActions: "play completed",
-        },
-    });
+            scrollTrigger: {
+                trigger: ".images-container4",
+                start: "top 50",
+                end: "bottom 50",
+                toggleActions: "play completed",
+            }
+        });
 
-    gsap.set(".image1-container4, .image2-container4, .image3-container4, .image4-container4, .image5-container4, .image6-container4", {
-        height: "0%",
-    });
-
-    tl.to(".image1-container4, .image3-container4, .image5-container4", {
-        height: "60%",
-        duration: 1,
-        stagger: 0.2
-    });
-
-    tl.to(".image2-container4, .image4-container4, .image6-container4", {
-        height: "30%",
-        duration: 1,
-        stagger: 0.2
-    }, "-= 0.5");
-    });
-
-    mm.add("(max-width: 479px)", () => {
+        gsap.set(".image1-container4, .image2-container4, .image3-container4, .image4-container4, .image5-container4, .image6-container4", {
+            height: "0%",
+        });
+    
+        tl.to(".image1-container4, .image3-container4, .image5-container4", {
+            height: "60%",
+            duration: 1,
+            stagger: 0.2
+        });
+    
+        tl.to(".image2-container4, .image4-container4, .image6-container4", {
+            height: "30%",
+            duration: 1,
+            stagger: 0.2
+        }, "-= 0.5");
+    } else {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: ".images-container4",
@@ -378,8 +368,8 @@ function contentContainer4() {
             duration: 1,
             stagger: 0.2
         }, "-= 0.5");
-    });
-    
+    }
+
 }
 contentContainer4();
 /* Content Container4 End */
@@ -387,7 +377,7 @@ contentContainer4();
 /* Footer */
 function footerContainer() {
     
-    mm.add("(min-width: 480px)", () => {
+    if (matchMedia("(min-width: 480px)").matches) {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: ".content-footer",
@@ -419,9 +409,7 @@ function footerContainer() {
             stagger: 0.1,
             duration: 0.5,
         });
-    });
-
-    mm.add("(max-width: 479px)", () => {
+    } else {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: ".content-footer",
@@ -453,9 +441,7 @@ function footerContainer() {
             stagger: 0.1,
             duration: 0.5,
         });
-    });
-
-    
+    }
 }
 footerContainer();
 /* Footer End */
