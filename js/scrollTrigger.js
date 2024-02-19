@@ -257,14 +257,13 @@ function contentContainer2() {
                 start: "200 600",
                 end: "200 400",
                 toggleActions: "play completed",
-                markers: true,
             }
         });
         
-        gsap.set(".par-content", {opacity: 0, y: "30vh"}, "-=1");
+        gsap.set(".par-content", {opacity: 0, y: "20vh"}, "-=1");
     
         tl.to(".par-content", {
-            y: "-20vh",
+            y: "-10vh",
             opacity: 1,
             duration: 1,
             ease: "power3.in",
@@ -272,10 +271,10 @@ function contentContainer2() {
             delay: 0.5,
         });
     
-        gsap.set(".button-container2", {opacity: 0, y: "30vh"});
-        gsap.set(".image-container2", {opacity: 0, y: "30vh"}, "-=1");
+        gsap.set(".button-container2", {opacity: 0, y: "10vh"});
+        gsap.set(".image-container2", {opacity: 0}, "-=1");
     
-        tl.to(".button-container2", {y: "-30vh", opacity: 1, delay: 0.8});
+        tl.to(".button-container2", {y: "-15vh", opacity: 1, delay: 0.8});
         tl.to(".image-container2", {y: "-20vh", opacity: 1,  delay: 0.8}, "-=1");
     
         gsap.set(".video-container3", {opacity: 0}, "-=1");
