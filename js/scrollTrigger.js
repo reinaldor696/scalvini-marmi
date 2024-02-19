@@ -112,7 +112,7 @@ firstEffectContainer1();
 
 function imgEffectContainer1() {
 
-    const tl1 = gsap.timeline({
+    const tl = gsap.timeline({
         scrollTrigger: {
             trigger: ".images-container",
                 start: "0 center",
@@ -121,13 +121,20 @@ function imgEffectContainer1() {
             }
     });
 
-    tl1.set(".img-container1", {y: "100%"}, "-=1");
-    tl1.set(".img-container2-a", {x: "100%"}, "-=1");
-    tl1.set(".img-container2-b", {x: "-100%"}, "-=1");
-    tl1.set(".img-container3-a", {x: "100%", y: "-100%"}, "-=1");
-    tl1.set(".img-container3-b", {x: "-15%",y: "-100%"}, "-=1");
+    tl.set(".img-container1", {y: "100%"}, "-=1");
+    tl.set(".img-container2-a", {x: "100%"}, "-=1");
+    tl.set(".img-container2-b", {x: "-100%"}, "-=1");
+    tl.set(".img-container3-a", {x: "100%", y: "-100%"}, "-=1");
+    tl.set(".img-container3-b", {x: "-15%",y: "-100%"}, "-=1");
 
-    tl1.to(".img-container1, .img-container2-a, .img-container2-b, .img-container3-a, .img-container3-b", {x: 0, y:0, duration: 1});
+    tl.to(".img-container1, .img-container2-a, .img-container2-b, .img-container3-a, .img-container3-b", {x: 0, y:0, duration: 1});
+
+    mm.add("(max-width: 479px)", () => {
+
+        gsap.set(".images-container", {opacity: 0});
+
+        gsap.to(".images-container", {opacity: 1, delay: 0.5, duration: 1,});
+    });    
 }
 imgEffectContainer1();
 
