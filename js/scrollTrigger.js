@@ -425,8 +425,8 @@ function footerContainer() {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: ".content-footer",
-                start: "center 150",
-                end: "bottom 150",
+                start: "center center",
+                end: "bottom center",
                 toggleActions: "play completed",
             },
         });
