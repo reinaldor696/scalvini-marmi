@@ -174,7 +174,6 @@ function videoEffectContainer1() {
                 start: "center 150",
                 end: "bottom 150",
                 scrub: true,
-                markers: true,
             }
         }); 
     
