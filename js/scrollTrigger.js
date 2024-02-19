@@ -262,7 +262,6 @@ function contentContainer4() {
             start: "top 50",
             end: "bottom 50",
             toggleActions: "play completed",
-            markers: true,
         },
     });
 
