@@ -356,8 +356,8 @@ function contentContainer4() {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: ".images-container4",
-                start: "center -200",
-                end: "bottom -200",
+                start: "center 150",
+                end: "bottom 150",
                 toggleActions: "play completed",
                 markers: false
             },
@@ -425,8 +425,8 @@ function footerContainer() {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: ".content-footer",
-                start: "center 50",
-                end: "bottom 50",
+                start: "center 150",
+                end: "bottom 150",
                 toggleActions: "play completed",
             },
         });
