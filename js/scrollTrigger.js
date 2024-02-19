@@ -385,38 +385,76 @@ contentContainer4();
 
 /* Footer */
 function footerContainer() {
-
-    const tl = gsap.timeline({
-        scrollTrigger: {
-            trigger: ".content-footer",
-            start: "top 150",
-            end: "bottom 150",
-            toggleActions: "play completed",
-        },
+    
+    mm.add("(min-width: 480px)", () => {
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".content-footer",
+                start: "top 150",
+                end: "bottom 150",
+                toggleActions: "play completed",
+            },
+        });
+    
+        gsap.set(".title-footer h1", {
+            opacity: 0,
+            y: "100%",
+        });
+    
+        gsap.set(".social-media, .privacy-policy p", {
+            opacity: 0,
+            y: "100%",
+        });
+    
+        tl.to(".title-footer h1", {
+            opacity: 1,
+            duration: 0.5,
+            y: 0,
+        });
+    
+        tl.to(".social-media, .privacy-policy p", {
+            opacity: 1,
+            y: 0,
+            stagger: 0.1,
+            duration: 0.5,
+        });
     });
 
-    gsap.set(".title-footer h1", {
-        opacity: 0,
-        y: "100%",
+    mm.add("(max-width: 479px)", () => {
+        const tl = gsap.timeline({
+            scrollTrigger: {
+                trigger: ".content-footer",
+                start: "center 50",
+                end: "bottom 50",
+                toggleActions: "play completed",
+            },
+        });
+    
+        gsap.set(".title-footer h1", {
+            opacity: 0,
+            y: "100%",
+        });
+    
+        gsap.set(".social-media, .privacy-policy p", {
+            opacity: 0,
+            y: "100%",
+        });
+    
+        tl.to(".title-footer h1", {
+            opacity: 1,
+            duration: 0.5,
+            y: 0,
+        });
+    
+        tl.to(".social-media, .privacy-policy p", {
+            opacity: 1,
+            y: 0,
+            stagger: 0.1,
+            duration: 0.5,
+        });
     });
 
-    gsap.set(".social-media, .privacy-policy p", {
-        opacity: 0,
-        y: "100%",
-    });
-
-    tl.to(".title-footer h1", {
-        opacity: 1,
-        duration: 0.5,
-        y: 0,
-    });
-
-    tl.to(".social-media, .privacy-policy p", {
-        opacity: 1,
-        y: 0,
-        stagger: 0.1,
-        duration: 0.5,
-    });
+    
 }
 footerContainer();
 /* Footer End */
