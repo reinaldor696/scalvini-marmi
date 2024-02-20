@@ -173,7 +173,7 @@ function videoEffectContainer1() {
         }); 
     
     
-        tl.to(".video-container2", {width: "100vw", height: "100vh", pin: true, pinSpacing: true, duration: 1});
+        tl.to(".video-container2", {width: "100vw", height: "120vh", pin: true, pinSpacing: true, duration: 1});
         
         tl.to(".img-container1", {y: "-100vh", duration: 1, opacity: 0});
     
