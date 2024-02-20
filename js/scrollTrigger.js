@@ -246,8 +246,8 @@ function contentContainer2() {
         const tl1 = gsap.timeline({
             scrollTrigger: {
                 trigger: ".par-content",
-                start: "200 center",
-                end: "200 200",
+                start: "top center",
+                end: "top 200",
                 toggleActions: "play completed",
             }
         });
@@ -264,8 +264,8 @@ function contentContainer2() {
         const tl2 = gsap.timeline({
             scrollTrigger: {
                 trigger: ".button-container2",
-                start: "200 center",
-                end: "200 200",
+                start: "top center",
+                end: "top 200",
                 toggleActions: "play completed",
             }
         });
@@ -276,8 +276,8 @@ function contentContainer2() {
         const tl3 = gsap.timeline({
             scrollTrigger: {
                 trigger: ".image-container2",
-                start: "200 300",
-                end: "200 200",
+                start: "top 300",
+                end: "top 200",
                 toggleActions: "play completed",
                 markers: true
             }
