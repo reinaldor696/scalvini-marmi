@@ -170,6 +170,7 @@ function videoEffectContainer1() {
                 end: "bottom top",
                 scrub: true,
                 pinSpacing: true,
+                marker: false
             }
         }); 
     
