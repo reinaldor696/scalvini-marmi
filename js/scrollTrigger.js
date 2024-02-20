@@ -169,6 +169,7 @@ function videoEffectContainer1() {
                 start: "top top",
                 end: "bottom top",
                 scrub: true,
+                pinSpacing: true,
                 markers: true
             }
         }); 
@@ -250,6 +251,7 @@ function contentContainer2() {
                 start: "top center",
                 end: "top 200",
                 toggleActions: "play completed",
+                pinSpacing: true,
                 markers: true
             }
         });
@@ -269,6 +271,7 @@ function contentContainer2() {
                 start: "top center",
                 end: "top 200",
                 toggleActions: "play completed",
+                pinSpacing: true,
                 markers: true
             }
         });
@@ -282,6 +285,7 @@ function contentContainer2() {
                 start: "top 300",
                 end: "top 200",
                 toggleActions: "play completed",
+                pinSpacing: true,
                 markers: true
             }
         });
@@ -366,9 +370,10 @@ function contentContainer4() {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: ".images-container4",
-                start: "center 150",
-                end: "bottom 150",
+                start: "top 700",
+                end: "bottom 700",
                 toggleActions: "play completed",
+                pinSpacing: true,
                 markers: true
             },
         });
@@ -433,9 +438,10 @@ function footerContainer() {
         const tl = gsap.timeline({
             scrollTrigger: {
                 trigger: ".content-footer",
-                start: "center center",
-                end: "bottom center",
+                start: "top 700",
+                end: "bottom 700",
                 toggleActions: "play completed",
+                pinSpacing: true,
                 markers: true
             },
         });
