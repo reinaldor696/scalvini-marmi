@@ -170,7 +170,7 @@ function videoEffectContainer1() {
                 end: "bottom top",
                 scrub: true,
                 pinSpacing: true,
-                marker: false
+                markers: false
             }
         }); 
     
@@ -252,6 +252,7 @@ function contentContainer2() {
                 end: "top 200",
                 toggleActions: "play completed",
                 pinSpacing: true,
+                markers: false
             }
         });
         
@@ -271,6 +272,7 @@ function contentContainer2() {
                 end: "top 200",
                 toggleActions: "play completed",
                 pinSpacing: true,
+                markers: false
             }
         });
         gsap.set(".button-container2", {opacity: 0, y: "10vh"});
@@ -284,6 +286,7 @@ function contentContainer2() {
                 end: "top 200",
                 toggleActions: "play completed",
                 pinSpacing: true,
+                markers: false
             }
         });
         gsap.set(".image-container2", {opacity: 0});
@@ -371,6 +374,7 @@ function contentContainer4() {
                 end: "bottom 800",
                 toggleActions: "play completed",
                 pinSpacing: true,
+                markers: false
             },
         });
     
@@ -438,6 +442,7 @@ function footerContainer() {
                 end: "bottom bottom",
                 toggleActions: "play completed",
                 pinSpacing: true,
+                markers: false
             },
         });
     
